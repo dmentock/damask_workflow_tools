@@ -1,0 +1,11 @@
+type: thermalexpansion
+
+references:
+  - https://commons.wikimedia.org/wiki/File:Coefficient_dilatation_lineique_aciers.svg,
+    fit to image description (Scilab code)
+
+Alpha_11: 10.2e-6
+Alpha_11,T: 1.260e-8
+Alpha_11,T^2: -1.000e-11
+
+T_ref: 293.15

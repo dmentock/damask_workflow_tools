@@ -1,0 +1,7 @@
+*.hdf5
+*.xdmf
+*.sta
+*.vt*
+*.out
+*.sts
+*.t16
