@@ -1,0 +1,19 @@
+type: phenopowerlaw
+
+references:
+  - K.M. Jackson and C. Lang,
+    Platinum Metals Review 50:15-19, 2006,
+    https://doi.org/10.1595/147106705X93359,
+    fitted to Fig. 5 (Pt-5% Cu recrystallised)
+
+output: [xi_sl, gamma_sl]
+
+N_sl: [12]
+
+dot_gamma_0_sl: [0.001]
+n_sl: [20]
+a_sl: [0.9]
+xi_0_sl: [0.114e+9]
+xi_inf_sl: [0.207e+9]
+h_0_sl-sl: [0.7812e+9]
+h_sl-sl: [1, 1, 5.123, 0.574, 1.123, 1.123, 1]
