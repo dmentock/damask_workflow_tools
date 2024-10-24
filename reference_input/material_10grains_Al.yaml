@@ -1,0 +1,86 @@
+homogenization:
+  SX:
+    N_constituents: 1
+    mechanical: {type: pass}
+phase:
+  Aluminium:
+    lattice: cF
+    mechanical:
+      output: [F, P, F_e, L_p, O]
+      elastic:
+        type: Hooke
+        references: ['G.N. Kamm and G.A. Alers, Journal of Applied Physics 35:327-330, 1964, https://doi.org/10.1063/1.1713309, fit to Tab. I (T_min=100K, T_max=300K)', 'D. Gerlich and E.S. Fisher, Journal of Physics and Chemistry of Solids 30:1197-1205, 1969,
+            https://doi.org/10.1016/0022-3697(69)90377-1, fit to Tab. 2 (T_min=293K, T_max=900K)']
+        C_11: 106900000000.0
+        C_11,T: -36910000.0
+        C_11,T^2: -9790.0
+        C_12: 60500000000.0
+        C_12,T: -8412000.0
+        C_12,T^2: -3972.0
+        C_44: 28400000000.0
+        C_44,T: -14130000.0
+        C_44,T^2: -3408.0
+        T_ref: 293.15
+      plastic:
+        type: phenopowerlaw
+        references: ['W.F. Hosford et al., Acta Metallurgica 8(3):187-199, 1960, https://doi.org/10.1016/0001-6160(60)90127-9, fitted to Fig. 5 ([111] and [001])']
+        output: [xi_sl, gamma_sl]
+        N_sl: [12]
+        dot_gamma_0_sl: [7.5e-05]
+        n_sl: [20]
+        a_sl: [5.4]
+        xi_0_sl: [2690000.0]
+        xi_inf_sl: [67500000.0]
+        h_0_sl-sl: [281500000.0]
+        h_sl-sl: [1, 1, 5.123, 0.574, 1.123, 1.123, 1]
+material:
+- constituents:
+  - phase: Aluminium
+    O: [0.024787425434951587, -0.7247319092418006, 0.6448086949589196, -0.24160089025584366]
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: Aluminium
+    O: [0.23493285884598658, 0.8352587918962998, 0.20887904781688396, -0.45113063050240504]
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: Aluminium
+    O: [0.807119410968761, 0.3065582424832816, -0.48801869362453215, -0.12813295858601984]
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: Aluminium
+    O: [0.08242597642086413, -0.8833535510640705, -0.4182679075579736, 0.1947932743721869]
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: Aluminium
+    O: [0.9185581138850117, -0.10114434748354878, 0.25036831863094794, 0.2886806495317082]
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: Aluminium
+    O: [0.571258741805971, -0.385127107342775, 0.4951979037627888, -0.529263258888226]
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: Aluminium
+    O: [0.7191265353960036, -0.549926220065152, -0.3978413856816381, 0.1488637310197097]
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: Aluminium
+    O: [0.33911832218172233, -0.853239028430518, 0.170245489489735, -0.3577686364565787]
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: Aluminium
+    O: [0.37098505529374454, 0.25235993650167343, -0.017909605725448273, 0.8935120576804365]
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: Aluminium
+    O: [0.38701736286503385, 0.10965280975302165, -0.879427269637969, 0.25456138664646144]
+    v: 1.0
+  homogenization: SX
