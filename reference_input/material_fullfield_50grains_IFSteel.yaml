@@ -1,0 +1,293 @@
+homogenization:
+  SX:
+    N_constituents: 1
+    mechanical: {type: pass}
+phase:
+  IFSteel:
+    lattice: cI
+    mechanical:
+      output: [F, P, F_e, L_p, O]
+      elastic:
+        type: Hooke
+        references: ["D.J. Dever, Journal of Applied Physics 43(8):3293-3301, 1972, https://doi.org/10.1063/1.1661710, fit to Tab. II (T_min=25\xBAC, T_max=880\xBAC)"]
+        C_11: 232200000000.0
+        C_11,T: -46830000.0
+        C_11,T^2: -59880.0
+        C_12: 136400000000.0
+        C_12,T: -19700000.0
+        C_12,T^2: 3760.0
+        C_44: 117000000000.0
+        C_44,T: -20150000.0
+        C_44,T^2: -748.5
+        T_ref: 293.15
+      plastic:
+        type: dislotwin
+        references: ['K. Sedighiani et al., International Journal of Plasticity 134:102779, 2020, https://doi.org/10.1016/j.ijplas.2020.102779', 'K. Sedighiani et al., Mechanics of Materials, 164:104117, 2022, https://doi.org/10.1016/j.mechmat.2021.104117']
+        output: [rho_dip, rho_mob, gamma_sl, Lambda_sl, tau_pass]
+        N_sl: [12, 12]
+        f_edge: [1.0, 1.0]
+        b_sl: [2.49e-10, 2.49e-10]
+        rho_mob_0: [2810000000000.0, 2800000000000.0]
+        rho_dip_0: [1.0, 1.0]
+        v_0: [1400.0, 1400.0]
+        Q_sl: [1.57e-19, 1.57e-19]
+        tau_0: [454000000.0, 454000000.0]
+        p_sl: [0.325, 0.325]
+        q_sl: [1.55, 1.55]
+        i_sl: [23.3, 23.3]
+        D_a: 7.4
+        B: [0.001, 0.001]
+        h_sl-sl: [0.1, 0.72, 0.1, 0.053, 0.053, 0.073, 0.137, 0.72, 0.72, 0.053, 0.053, 0.053, 0.053, 0.073, 0.073, 0.073, 0.073, 0.073, 0.073, 0.137, 0.073, 0.073, 0.137, 0.073]
+        Q_cl: 5.4e-19
+        D: 4.0e-05
+material:
+- constituents:
+  - phase: IFSteel
+    O: [0.39813767955587565, -0.41668661068121354, 0.10960247671306482, 0.809843166110098]
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: IFSteel
+    O: [0.44653512106037824, 0.620264041068592, 0.20373723274793196, -0.6118578634038043]
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: IFSteel
+    O: [0.7289223661839338, 0.5870581331603264, -0.08837552177361453, 0.3409174379792986]
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: IFSteel
+    O: [0.48641925394618224, -0.3319295150436026, 0.5892081274863692, 0.5532204704612481]
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: IFSteel
+    O: [0.12168935516094717, 0.12221549962274111, 0.6905462479990034, 0.7024250507114445]
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: IFSteel
+    O: [0.42618769884054275, 0.8774746339533088, -0.21859339123949983, 0.02488456212040907]
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: IFSteel
+    O: [0.7322936661939496, 0.5720011250778456, 0.3692273052916377, -0.015228144633495621]
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: IFSteel
+    O: [0.2802378098877186, -0.32384567325593777, 0.891843461334866, 0.14562276709700556]
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: IFSteel
+    O: [0.1532762722198248, 0.8346649063452425, 0.3641345256144132, -0.38372767133169844]
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: IFSteel
+    O: [0.4008006295027878, -0.48383052410333893, -0.7101973995448689, -0.3176264047836124]
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: IFSteel
+    O: [0.36955398699757586, -0.821142255014624, 0.16499776110467027, 0.4024064941749075]
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: IFSteel
+    O: [0.9751731376438225, 0.06613814777785347, 0.022928234922160555, -0.21008901225378587]
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: IFSteel
+    O: [0.10374315336082195, 0.030050173017570108, -0.7191024195587372, -0.6864590704602401]
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: IFSteel
+    O: [0.5017957794927644, 0.6202325345823896, 0.3885297658828313, -0.46103928222201]
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: IFSteel
+    O: [0.10641441926319599, 0.43388160190270836, -0.34752316562781266, -0.8244091073339985]
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: IFSteel
+    O: [0.7339306190964872, -0.2672183972141188, -0.619544841914641, 0.07813042557113702]
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: IFSteel
+    O: [0.05406118994739357, -0.5607663894912692, -0.22237270401878656, 0.7957190613940143]
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: IFSteel
+    O: [0.27151073775260237, -0.3033134127545773, 0.2660021064993411, -0.8737996179136966]
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: IFSteel
+    O: [0.3150264177745524, 0.31650467944159766, -0.8918967166472991, -0.07143802089554513]
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: IFSteel
+    O: [0.3555475968176112, -0.6135155923150218, 0.65573034971794, -0.25923393458873667]
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: IFSteel
+    O: [0.0011573337438230134, 0.9566501700274783, -0.29123410620595014, -0.001344673723785054]
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: IFSteel
+    O: [0.47826119248748367, 0.6254997586060879, 0.47249010691856225, 0.3959411352818264]
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: IFSteel
+    O: [0.5339980148588556, -0.22650211584950083, 0.7142624835533152, -0.3916273946377484]
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: IFSteel
+    O: [0.44906881231857926, -0.7009206780893792, -0.07377047752867827, -0.5491860536054209]
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: IFSteel
+    O: [0.42191318365640373, 0.13027620473428364, 0.8938335947261195, 0.07796717819654697]
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: IFSteel
+    O: [0.2723334169513118, 0.19357874281342052, 0.8244146586775284, -0.45683941478380885]
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: IFSteel
+    O: [0.9417118736930065, 0.28777554773826786, -0.16050890876521737, 0.06782972266304632]
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: IFSteel
+    O: [0.06663599389677337, -0.5765167420769384, 0.8143563929460975, 0.003428657201206744]
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: IFSteel
+    O: [0.10544967953140215, 0.885409564365372, -0.26923873521530617, 0.36392412928618645]
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: IFSteel
+    O: [0.028416507627204955, -0.5450580530841959, 0.7929228105439168, -0.27088306957333996]
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: IFSteel
+    O: [0.2253410879080287, 0.9673922513593256, -0.00946070221804845, -0.11525676216128451]
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: IFSteel
+    O: [0.10345694003573801, 0.1705914076793589, -0.14696629404547976, -0.9688117162787381]
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: IFSteel
+    O: [0.27698262574953497, 0.4738923213953694, -0.46218250682430384, 0.6964869152690546]
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: IFSteel
+    O: [0.13711971814369556, -0.5568248657174318, -0.6693601316497815, 0.47233596726561566]
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: IFSteel
+    O: [0.13310442511564177, -0.8791826556534029, -0.04796573798098714, -0.45499489886459576]
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: IFSteel
+    O: [0.3378669110333106, -0.3005580633798889, -0.7489448580747968, -0.48434739653420483]
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: IFSteel
+    O: [0.023213611175953084, -0.15984487916485796, 0.9496979056584959, 0.26829951704915567]
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: IFSteel
+    O: [0.3339878280261434, 0.3283933110983752, -0.4221023380667122, 0.7761698139935874]
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: IFSteel
+    O: [0.557352080397216, 0.6166555616636283, 0.16155319940354695, 0.5319728757264679]
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: IFSteel
+    O: [0.4898152992167521, -0.7255051112638967, -0.44574187721298214, 0.18718302562415032]
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: IFSteel
+    O: [0.005570387611647646, 0.995226381663985, -0.06587261769489043, 0.07179288446559819]
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: IFSteel
+    O: [0.04786411048481702, 0.7252265072150545, 0.508595648185296, 0.4616123988879938]
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: IFSteel
+    O: [0.21436529267581816, -0.6739842823794, 0.6979176167032369, 0.11271073017601184]
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: IFSteel
+    O: [0.809007400961475, 0.13187514303854647, -0.5040770342950562, 0.27207042348337435]
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: IFSteel
+    O: [0.6433520657124591, 0.06609626151912068, 0.5040635221564265, -0.5724066468761221]
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: IFSteel
+    O: [0.7694374639409466, -0.3153595372220377, -0.21212085453170915, -0.5133411092441013]
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: IFSteel
+    O: [0.3178333431614793, -0.8163330231861455, 0.4803454608104094, 0.04301859492592249]
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: IFSteel
+    O: [0.11035593501959177, -0.6922060884354438, 0.310187703628588, -0.642227286290825]
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: IFSteel
+    O: [0.43188213069691955, 0.6014820273693524, -0.5415717844161463, -0.397991455009594]
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: IFSteel
+    O: [0.8623860357884833, 0.013498908747574817, -0.38170302525251715, -0.33228136458839475]
+    v: 1.0
+  homogenization: SX
