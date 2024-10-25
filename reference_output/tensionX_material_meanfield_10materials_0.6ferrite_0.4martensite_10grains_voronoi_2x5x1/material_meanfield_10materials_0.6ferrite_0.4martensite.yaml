@@ -1,0 +1,144 @@
+homogenization:
+  Taylor:
+    N_constituents: 2
+    mechanical: {type: isostrain}
+phase:
+  Martensite:
+    lattice: cI
+    mechanical:
+      output: [F, P, F_e, L_p, O]
+      elastic:
+        type: Hooke
+        references: ["D.J. Dever, Journal of Applied Physics 43(8):3293-3301, 1972, https://doi.org/10.1063/1.1661710, fit to Tab. II (T_min=25\xBAC, T_max=880\xBAC)"]
+        C_11: 232200000000.0
+        C_11,T: -46830000.0
+        C_11,T^2: -59880.0
+        C_12: 136400000000.0
+        C_12,T: -19700000.0
+        C_12,T^2: 3760.0
+        C_44: 117000000000.0
+        C_44,T: -20150000.0
+        C_44,T^2: -748.5
+        T_ref: 293.15
+      plastic:
+        type: phenopowerlaw
+        references: ['C.C. Tasan et al., Acta Materialia 81:386-400, 2014, https://doi.org/10.1016/j.actamat.2014.07.071, Table 1', "U.F. Kocks, Metallurgical and Materials Transactions B 1:1121\u20131143, 1970, https://doi.org/10.1007/BF02900224"]
+        output: [xi_sl, gamma_sl]
+        N_sl: [12, 12]
+        dot_gamma_0_sl: [0.001, 0.001]
+        xi_0_sl: [405800000.0, 456700000.0]
+        xi_inf_sl: [872900000.0, 971200000.0]
+        h_0_sl-sl: [563000000000.0, 563000000000.0]
+        n_sl: [20, 20]
+        a_sl: [2.0, 2.0]
+        h_sl-sl: [1, 1.4, 1, 1.4, 1.4, 1.4, 1.4, 1.4, 1.4, 1.4, 1.4, 1.4, 1.4, 1.4, 1.4, 1.4, 1.4, 1.4, 1.4, 1.4, 1.4, 1.4, 1.4, 1.4]
+  Ferrite:
+    lattice: cI
+    mechanical:
+      output: [F, P, F_e, L_p, O]
+      elastic:
+        type: Hooke
+        references: ["D.J. Dever, Journal of Applied Physics 43(8):3293-3301, 1972, https://doi.org/10.1063/1.1661710, fit to Tab. II (T_min=25\xBAC, T_max=880\xBAC)"]
+        C_11: 232200000000.0
+        C_11,T: -46830000.0
+        C_11,T^2: -59880.0
+        C_12: 136400000000.0
+        C_12,T: -19700000.0
+        C_12,T^2: 3760.0
+        C_44: 117000000000.0
+        C_44,T: -20150000.0
+        C_44,T^2: -748.5
+        T_ref: 293.15
+      plastic:
+        type: phenopowerlaw
+        references: ['C.C. Tasan et al., Acta Materialia 81:386-400, 2014, https://doi.org/10.1016/j.actamat.2014.07.071, Table 1', "U.F. Kocks, Metallurgical and Materials Transactions B 1:1121\u20131143, 1970, https://doi.org/10.1007/BF02900224"]
+        output: [xi_sl, gamma_sl]
+        N_sl: [12, 12]
+        dot_gamma_0_sl: [0.001, 0.001]
+        n_sl: [20, 20]
+        a_sl: [2.25, 2.25]
+        xi_0_sl: [95000000.0, 96000000.0]
+        xi_inf_sl: [222000000.0, 412000000.0]
+        h_0_sl-sl: [1000000000.0, 1000000000.0]
+        h_sl-sl: [1, 1.4, 1, 1.4, 1.4, 1.4, 1.4, 1.4, 1.4, 1.4, 1.4, 1.4, 1.4, 1.4, 1.4, 1.4, 1.4, 1.4, 1.4, 1.4, 1.4, 1.4, 1.4, 1.4]
+material:
+- constituents:
+  - phase: Martensite
+    v: 0.4
+    O: [0.07733906182789865, 0.6653881797620571, -0.5611630357833772, 0.4861823598392899]
+  - phase: Ferrite
+    v: 0.6
+    O: [0.4842975736215126, -0.18476393813822511, -0.8170193282580945, -0.2525817978411384]
+  homogenization: Taylor
+- constituents:
+  - phase: Martensite
+    v: 0.4
+    O: [0.11313936105750642, 0.7095145429625205, -0.11388253238783139, -0.6861627847101003]
+  - phase: Ferrite
+    v: 0.6
+    O: [0.3237780955509089, 0.6682203590843279, -0.527645337027244, 0.41260113288749534]
+  homogenization: Taylor
+- constituents:
+  - phase: Martensite
+    v: 0.4
+    O: [0.01791625648564429, -0.46254790059678275, -0.7446018033742734, 0.4809330533648413]
+  - phase: Ferrite
+    v: 0.6
+    O: [0.16817127500560047, -0.44996881841686026, -0.8530463051227263, -0.203858985654275]
+  homogenization: Taylor
+- constituents:
+  - phase: Martensite
+    v: 0.4
+    O: [0.43081105274350334, -0.6416604377110362, 0.5046797804405225, -0.3846713385801207]
+  - phase: Ferrite
+    v: 0.6
+    O: [0.348910485227108, 0.08342149987401068, 0.7452011141373538, 0.5621188718997088]
+  homogenization: Taylor
+- constituents:
+  - phase: Martensite
+    v: 0.4
+    O: [0.04761824447735163, 0.2581327559633902, 0.8516372477186047, -0.45366725845042]
+  - phase: Ferrite
+    v: 0.6
+    O: [0.09172922639160128, -0.37436118672001534, 0.8872046493668204, -0.25358896081075255]
+  homogenization: Taylor
+- constituents:
+  - phase: Martensite
+    v: 0.4
+    O: [0.060716991999326335, -0.8035682446437721, 0.4942277567584592, -0.3260834977918722]
+  - phase: Ferrite
+    v: 0.6
+    O: [0.7970480637035117, 0.2544981185174714, 0.5471004048259346, -0.025024764870989306]
+  homogenization: Taylor
+- constituents:
+  - phase: Martensite
+    v: 0.4
+    O: [0.7551342629083879, 0.3200358565351222, -0.04752662196366146, 0.5701670945594453]
+  - phase: Ferrite
+    v: 0.6
+    O: [0.4564315658326787, 0.1952345212588179, -0.8135533723310202, -0.30279467926169634]
+  homogenization: Taylor
+- constituents:
+  - phase: Martensite
+    v: 0.4
+    O: [0.789792910833238, 0.23056848369977304, 0.5484275695431357, 0.1493068427332038]
+  - phase: Ferrite
+    v: 0.6
+    O: [0.020484595251089043, -0.7476373490029996, 0.3300241978323223, -0.5759364588027902]
+  homogenization: Taylor
+- constituents:
+  - phase: Martensite
+    v: 0.4
+    O: [0.5743528475623847, 0.22282163666734922, 0.47514247553794275, -0.6282586670071009]
+  - phase: Ferrite
+    v: 0.6
+    O: [0.06428529088961134, 0.451019711177484, -0.19077410111681356, 0.8695135788748147]
+  homogenization: Taylor
+- constituents:
+  - phase: Martensite
+    v: 0.4
+    O: [0.37374671050192587, 0.543539020851425, -0.28718663359654056, 0.694552061896263]
+  - phase: Ferrite
+    v: 0.6
+    O: [0.8106479181216484, 0.4581609004934293, -0.004872660870351075, 0.36457481986573065]
+  homogenization: Taylor

@@ -33,7 +33,7 @@
  PETSc version: 3.15.5
 
  Date: 25/10/2024
- Time: 11:17:08
+ Time: 11:58:12
 
  Host name: mapc204
  User name: snkrkr
@@ -85,12 +85,12 @@
  <<<+-  math init  -+>>>
 
  size  of random seed:      8
- value of random seed:       -983480161  2065596106  -427288170  2054812690  -562198023  1853788308  -358242267   158585303
+ value of random seed:      -1377684183   -14001393  1874106928  -566798115   880609710   265368309 -1450210459  -367176450
  start of random sequence: 
-                           0.62854895414830
-                           0.13476949622489
-                           0.12780701537300
-                           0.52365234623518
+                           0.58466684417808
+                           0.91509277398749
+                           0.84638407629748
+                           0.31428966580324
 
  <<<+-  rotations init  -+>>>
 
@@ -5612,6 +5612,6 @@
 
  DAMASK terminated on:
  Date:               25/10/2024
- Time:               11:17:09
+ Time:               11:58:13
 Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL IEEE_INEXACT_FLAG
 STOP 0

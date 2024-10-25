@@ -27,7 +27,7 @@ loadstep:
 - boundary_conditions:
     mechanical:
       dot_F:
-      - [1.001, 0, 0]
+      - [-0.001, 0, 0]
       - [0, x, 0]
       - [0, 0, x]
       P:
